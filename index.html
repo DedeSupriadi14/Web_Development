@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cunnai.id - Produk Digital Berkualitas</title>
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="Mid-client-bpPkPjDhPcw-ZuJD"></script>
+    
+    <script
+    chatbot_id="69ead105a04500ad3f0e5cee"
+    data-type="bar"
+    src="https://app.thinkstack.ai/bot/thinkstackai-loader.min.js">
+    </script>
+    <style>
+        /* CSS Murni - Dark Theme & Modern */
+        :root {
+            --bg: #121212;
+            --surface: #1e1e1e;
+            --primary: #7c3aed; /* Ungu */
+            --text: #ffffff;
+            --text-muted: #a0a0a0;
+            --shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+
+        /* Navbar */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: var(--surface); position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--primary); }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: var(--text); text-decoration: none; }
+
+        /* Hero */
+        .hero { padding: 5rem 5%; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .btn { padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer; font-weight: bold; transition: 0.3s; margin: 5px; }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { opacity: 0.9; }
+
+        /* Sections */
+        section { padding: 4rem 5%; }
+        h2 { text-align: center; margin-bottom: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: var(--surface); padding: 20px; border-radius: 12px; box-shadow: var(--shadow); text-align: center; }
+        .card img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+
+        /* Modal Checkout */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-content { background: var(--surface); padding: 2rem; border-radius: 12px; width: 90%; max-width: 400px; }
+        input { width: 100%; padding: 10px; margin: 10px 0; background: #333; border: 1px solid #444; color: white; border-radius: 6px; }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) { .nav-links { display: none; } }
+        footer { text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid #333; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CUNNAI.ID</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Produk</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Solusi Produk Digital Anda</h1>
+        <p>Akses premium, sekali beli selamanya.</p>
+        <div style="margin-top: 20px;">
+            <img src="https://placehold.net/default.png" alt="Hero" style="width: 300px; border-radius: 12px; margin-bottom: 20px;">
+            <br>
+            <button class="btn btn-primary">Lihat Produk</button>
+            <button class="btn" style="border: 1px solid white;">Beli Sekarang</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>Mengapa Memilih Kami?</h2>
+        <div class="grid">
+            <div class="card"><h3>Berkualitas</h3><p>Produk digital terkurasi.</p></div>
+            <div class="card"><h3>Selamanya</h3><p>Sekali beli, akses selamanya.</p></div>
+            <div class="card"><h3>Ramah Pemula</h3><p>Mudah dipahami siapa saja.</p></div>
+        </div>
+    </section>
+
+    <section id="produk">
+        <h2>Produk Kami</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://placehold.net/default.png" alt="Produk">
+                <h3>Kopi Arabica Premium</h3>
+                <p>Digital guide menyeduh kopi.</p>
+                <p><strong>Rp 50.000</strong></p>
+                <button class="btn btn-primary" onclick="openCheckout('Kopi Arabica', 50000)">Beli</button>
+            </div>
+            <div class="card">
+                <img src="https://placehold.net/default.png" alt="Produk">
+                <h3>Keripik Pedas Digital</h3>
+                <p>Resep rahasia keripik.</p>
+                <p><strong>Rp 35.000</strong></p>
+                <button class="btn btn-primary" onclick="openCheckout('Keripik Pedas', 35000)">Beli</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>FAQ</h2>
+        <div class="card">
+            <p><strong>Q: Apakah ini legal?</strong><br>A: Ya, kami memiliki lisensi resmi.</p>
+            <p style="margin-top: 15px;"><strong>Q: Bagaimana cara akses?</strong><br>A: Setelah bayar, link akan dikirim via email.</p>
+        </div>
+    </section>
+
+    <footer>&copy; 2026 Cunnai.id - Legalitas Terjamin</footer>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <h3>Checkout <span id="item-name"></span></h3>
+            <input type="hidden" id="order_id" readonly>
+            <input type="number" id="gross_amount" readonly>
+            <input type="email" id="email" placeholder="Email Anda" required>
+            <input type="text" id="phone" placeholder="Nomor HP" required>
+            <button id="pay-button" class="btn btn-primary" style="width: 100%;" onclick="initiatePayment()">Bayar Sekarang</button>
+            <button class="btn" style="width: 100%; margin-top:10px;" onclick="document.getElementById('checkout-modal').style.display='none'">Batal</button>
+        </div>
+    </div>
+
+    <script>
+        // Data Configuration
+        const SERVER_KEY = "Mid-server-rF8x0tAQ1hnPkrPG8Vd3yw-q"; // WARNING: Ganti dengan Server Key Anda
+        const PROXY_URL = "https://corsproxy.io/https://app.sandbox.midtrans.com/snap/v1/transactions";
+
+        function openCheckout(name, price) {
+            document.getElementById('item-name').innerText = name;
+            document.getElementById('order_id').value = "DE-" + new Date().getTime();
+            document.getElementById('gross_amount').value = price;
+            document.getElementById('checkout-modal').style.display = 'flex';
+        }
+
+        async function initiatePayment() {
+            const btn = document.getElementById('pay-button');
+            btn.innerText = "Memproses...";
+            btn.disabled = true;
+
+            const order_id = document.getElementById('order_id').value;
+            const gross_amount = parseInt(document.getElementById('gross_amount').value);
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            const payload = {
+                "transaction_details": {
+                    "order_id": order_id,
+                    "gross_amount": gross_amount
+                },
+                "customer_details": {
+                    "email": email,
+                    "phone": phone
+                },
+                "item_details": [{
+                    "id": "item-01",
+                    "price": gross_amount,
+                    "quantity": 1,
+                    "name": document.getElementById('item-name').innerText
+                }]
+            };
+
+            try {
+                // Base64 encode server key for Basic Auth
+                const auth = btoa(SERVER_KEY + ":"); 
+                
+                const response = await fetch(PROXY_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Basic ' + auth,
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+
+                if (data.token) {
+                    // Trigger Midtrans Snap
+                    window.snap.pay(data.token, {
+                        onSuccess: function(result) { alert("Pembayaran Berhasil!"); console.log(result); },
+                        onPending: function(result) { alert("Menunggu Pembayaran!"); },
+                        onError: function(result) { alert("Pembayaran Gagal!"); }
+                    });
+                } else {
+                    alert("Gagal mendapatkan token: " + JSON.stringify(data));
+                }
+            } catch (error) {
+                console.error(error);
+                alert("Terjadi kesalahan pada koneksi API.");
+            } finally {
+                btn.innerText = "Bayar Sekarang";
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
